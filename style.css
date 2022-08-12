@@ -1,0 +1,603 @@
+/*!
+Theme Name: lumis_experience
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: lumis_experience
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+lumis_experience is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+/* Normalize
+--------------------------------------------- */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Lato:wght@300;400;500;700;900&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+	max-width: 100vw !important;
+	overflow-x: hidden !important;
+}
+
+.container {
+	position: relative;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.img {
+	width: 100%;
+	height: auto;
+}
+
+.header {
+	background: #fcfbf9;
+	width: 100%;
+	height: 80px;
+	padding: 0 10vw;
+}
+
+.header__logo {
+	font-size: 36px;
+	font-weight: 900;
+}
+
+.header__menu__item {
+	display: block;
+	margin: 0 20px;
+	font-weight: 700;
+	font-size: 17px;
+	transition: .2s all;
+}
+
+.header__menu__item:hover {
+	color: #e36d34;
+}
+
+.videoSection {
+	position: relative;
+	width: 1600px;
+	margin: 50px auto;
+	max-width: 90%;
+}
+
+.video {
+	border-radius: 40px;
+	width: 100%;
+}
+
+.videoSection__img {
+	position: absolute;
+	width: 220px;
+}
+
+.videoSection__img--1 {
+	top: -30px;
+	left: -30px;
+}
+
+.videoSection__img--2 {
+	top: 30%;
+	right: -40px;
+}
+
+.videoSection__btn {
+	position: absolute;
+	bottom: 35px;
+	right: 35px;
+	width: 50px;
+	height: 50px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background: transparent;
+	z-index: 10;
+}
+
+.videoSection__btn__icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+}
+
+.videoSection__btn__icon--on {
+	visibility: hidden;
+}
+
+.section {
+	margin: 100px auto;
+}
+
+.section--icons,
+.section--services {
+	padding: 40px 0;
+	background: #fffaf3;
+}
+
+.section__header {
+	font-size: 36px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.section__text {
+	color: #696969;
+	font-size: 16px;
+	font-weight: 400;
+	font-family: 'Lato', sans-serif;
+}
+
+.section--services .section__text {
+	text-align: center;
+	margin: 5px auto 50px;
+}
+
+.section__link {
+	transition: .2s all;
+}
+
+.section--services .section__link {
+	height: 500px;
+	width: auto;
+	margin: 0 25px;
+}
+
+.section__link .img {
+	height: 100%;
+	width: auto;
+	-webkit-filter: drop-shadow(2px 2px 4px #923814);
+	filter: drop-shadow(2px 2px 4px #923814);
+}
+
+.section--services .section__link:hover {
+	transform: translateY(-15px);
+}
+
+.section--services .flex {
+	justify-content: center;
+}
+
+.section__content__beforeHeader {
+	color: #e36d34;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.section--aboutUs {
+	padding: 50px 0;
+}
+
+.section__content__header {
+	font-size: 36px;
+	margin: 15px 0 10px;
+}
+
+.section__content__text {
+	color: #696969;
+	font-size: 18px;
+	max-width: 400px;
+}
+
+.section--icons {
+	justify-content: center;
+}
+
+.section--icons__item {
+	margin: 0 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section--icons__item .icon {
+	width: 30px;
+}
+
+.section--icons__header {
+	text-align: center;
+	margin-top: 40px;
+	font-size: 24px;
+}
+
+.section__content__figure {
+	width: 400px;
+	margin-left: 70px;
+}
+
+.section--aboutUs {
+	justify-content: center;
+}
+
+.section--gradient {
+	position: relative;
+}
+
+.section--gradient .section__header {
+	color: #fff;
+	font-size: 28px;
+	text-align: center;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.section--gradient .btn {
+	position: absolute;
+	bottom: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 200px;
+	height: 55px;
+	background: #ff3e02;
+	color: #fff;
+	font-size: 17px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.section--gradient .btn .icon {
+	width: 20px;
+	margin-left: 14px;
+	transition: .2s all;
+}
+
+.section--gradient .btn:hover .icon {
+	transform: translateX(4px);
+}
+
+.section--bottom {
+	width: 500px;
+	margin: 0 auto 60px;
+}
+
+.footer {
+	background: #272623;
+	padding: 80px 0;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.footer * {
+	color: #a5a3a3;
+}
+
+.footer__header,
+.footer__menu__header {
+	color: #fff;
+}
+
+.footer__header {
+	text-transform: uppercase;
+	font-size: 28px;
+	font-weight: 900;
+}
+
+.footer__menu__header {
+	font-size: 24px;
+	position: relative;
+	margin-bottom: 40px;
+}
+
+.footer__menu__header::after {
+	content: "";
+	position: absolute;
+	bottom: -12px;
+	left: 0;
+	width: 50px;
+	height: 4px;
+	background: #e36d34;
+}
+
+.footer__col {
+	margin: 0 80px;
+}
+
+.footer__col:first-child {
+	max-width: 300px;
+}
+
+.footer__col > p,
+.footer__menu__link {
+	display: block;
+	margin: 15px 0;
+	transition: .2s all;
+	font-family: 'Lato', sans-serif;
+}
+
+.footer__col .icon {
+	width: 15px;
+	margin-right: 8px;
+}
+
+.footer__menu__link:hover {
+	color: rgba(255, 255, 255, .8);
+}
+
+.header__menuBtn {
+	display: none;
+}
+
+.mobileMenu {
+	display: none;
+}
+
+.section--bottom .icon {
+	margin-left: 14px;
+	width: 20px;
+	height: 20px;
+	filter: brightness(0);
+}
+
+.section--bottom div {
+	font-weight: 700;
+	font-size: 21px;
+	display: flex;
+	justify-content: flex-start;
+	align-content: center;
+	margin-left: 30px;
+	height: 30px;
+	margin-top: 90px;
+}
+
+.section--bottom--page--f1 div {
+	margin-top: 36px;
+}
+
+.section--bottom--page {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.section--bottom--page .img {
+	max-width: 200px;
+}
+
+.section--page {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	max-width: 1200px;
+	margin: 180px auto;
+}
+
+.section--page:first-of-type {
+	margin-top: 140px;
+}
+
+.section--page .img {
+	max-width: 300px;
+}
+
+.section--page--left .img {
+	margin-right: 80px;
+}
+
+.section--page .content__header {
+	text-transform: uppercase;
+	font-size: 28px;
+	margin-bottom: 25px;
+	color: #1e1e1e;
+}
+
+.section--page .content__text {
+	color: #696969;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	max-width: 400px;
+}
+
+.section--page--right .img {
+	margin-left: 80px;
+}
+
+.section--page--table .img {
+	-webkit-filter: drop-shadow(2px 2px 4px #a1988c);
+	filter: drop-shadow(2px 2px 4px #a1988c);
+}
+
+.text-center {
+	font-size: 21px;
+	color: #696969;
+	font-weight: 300;
+	text-align: center;
+	margin: 100px auto;
+	max-width: 1000px;
+}
+
+.section--icons__header--page span {
+	color: #e36d34;
+	font-weight: 900;
+	font-size: 64px;
+	padding-right: 10px;
+}
+
+.section--icons__header--page {
+	font-size: 48px;
+	text-align: center;
+}
+
+.section--icons__subheader {
+	color: #696969;
+	font-weight: 300;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 24px;
+}
+
+.section--gallery__header {
+	text-align: center;
+	font-size: 36px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.section--bottom--page .icon {
+	transition: .2s all;
+}
+
+.section--bottom--page:hover .icon {
+	transform: translateX(3px);
+}
+
+.section--page--left--gamingCenter .img {
+	max-width: 150px;
+}
+
+.ngg-slideshow.slick-slider {
+	margin-bottom: 15px !important;
+}
+
+.ngg-gallery-slideshow-image {
+	height: auto !important;
+}
+
+.home .section--gallery > .ngg-galleryoverview {
+	display: none !important;
+}
+
+iframe {
+	width: 100%;
+	height: auto;
+	min-height: 300px;
+	border: none !important;
+	-webkit-filter: drop-shadow(2px 2px 4px #000);
+	filter: drop-shadow(2px 2px 4px #000);
+}
+
+.contactMap {
+	margin: 50px auto;
+	width: 80%;
+	max-width: 1600px;
+}
+
+.page-id-248 iframe {
+	min-height: 400px;
+}
+
+input {
+	height: 50px;
+}
+
+form {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	max-width: 1000px;
+	margin: auto;
+}
+
+form textarea,
+form input {
+	background: #fcfbf9;
+	padding: 5px 10px;
+	border: none;
+}
+
+form p:last-of-type {
+	width: 100%;
+	margin-top: 20px;
+}
+
+form p:nth-of-type(4),
+form p:nth-of-type(4) * {
+	width: 100%;
+	resize: none;
+}
+
+form input[type=submit] {
+	width: 200px;
+	display: block;
+	margin: 0 auto 50px;
+	height: 50px;
+	border: none;
+	color: #fff;
+	font-weight: 700;
+	background: #ff3e02;
+	cursor: pointer;
+}
+
+.wpcf7-response-output {
+	margin: -30px auto 50px !important;
+}
