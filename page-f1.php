@@ -54,6 +54,38 @@ get_header();
     </h4>
 </section>
 
+<section class="section section--points">
+    <figure>
+        <img class="img" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/F1.png" alt="homepage" />
+    </figure>
+    <div class="section--points__points">
+        <p class="section__points__item">
+            <img class="icon" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/check.png" alt="arrow" />
+            Formel 1 Replika - fast in Echtgröße!
+        </p>
+        <p class="section__points__item">
+            <img class="icon" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/check.png" alt="arrow" />
+            Patentiert und einmalig in Europa
+        </p>
+        <p class="section__points__item">
+            <img class="icon" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/check.png" alt="arrow" />
+            benötigt nur wenige Quadratmeter an Stellfläche
+        </p>
+        <p class="section__points__item">
+            <img class="icon" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/check.png" alt="arrow" />
+            Krisensicheres Geschäft
+        </p>
+        <p class="section__points__item">
+            <img class="icon" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/check.png" alt="arrow" />
+            Unterhaltung für Jung und Alt
+        </p>
+        <p class="section__points__item">
+            <img class="icon" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/check.png" alt="arrow" />
+            Entstörung per Fernwartung
+        </p>
+    </div>
+</section>
+
 <section class="section section--gallery">
     <h4 class="section--gallery__header">
         <?php echo get_field('gallery_header'); ?>

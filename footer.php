@@ -36,10 +36,16 @@
         <a href="<?php echo get_page_link(get_page_by_title('Kontakt')->ID); ?>" class="footer__menu__link">
             <?php echo get_field('footer_link_4', 241); ?>
         </a>
+        <a href="<?php echo get_page_link(get_page_by_title('Datenschutzerklärung')->ID); ?>" class="footer__menu__link">
+            Datenschutzerklärung
+        </a>
+        <a href="<?php echo get_page_link(get_page_by_title('Impressum')->ID); ?>" class="footer__menu__link">
+            Impressum
+        </a>
     </div>
     <div class="footer__col">
         <h5 class="footer__menu__header">
-            <?php echo get_field('footer_header_1', 241); ?>
+            <?php echo get_field('footer_header_2', 241); ?>
         </h5>
         <p>
             <img class="icon" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/send-icon.svg" alt="icon" />

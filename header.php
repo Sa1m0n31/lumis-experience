@@ -25,20 +25,20 @@
 <div id="page" class="container">
     <div class="header flex">
         <a href="<?php echo home_url(); ?>" class="header__logo">
-            Lumis Experience
+            <?php echo get_field('header_logo', 241); ?>
         </a>
         <menu class="header__menu flex">
             <a href="<?php echo home_url(); ?>" class="header__menu__item">
-                Main Page
+                <?php echo get_field('menu_link_1', 241); ?>
             </a>
             <a href="<?php echo get_page_link(get_page_by_title('Gaming center')->ID); ?>" class="header__menu__item">
-                Gaming Center
+                <?php echo get_field('menu_link_2', 241); ?>
             </a>
             <a href="<?php echo get_page_link(get_page_by_title('F1')->ID); ?>" class="header__menu__item">
-                F1 Simulatoren
+                <?php echo get_field('menu_link_3', 241); ?>
             </a>
             <a href="<?php echo get_page_link(get_page_by_title('Kontakt')->ID); ?>" class="header__menu__item">
-                Kontakt
+                <?php echo get_field('menu_link_4', 241); ?>
             </a>
         </menu>
         <button class="header__menuBtn" onclick="openMenu()">
@@ -50,20 +50,20 @@
             </button>
 
             <h2 class="mobileMenu__header">
-                Lumis Experience
+                <?php echo get_field('header_logo', 241); ?>
             </h2>
 
             <a href="<?php echo home_url(); ?>" class="header__menu__item">
-                Main Page
+                <?php echo get_field('menu_link_1', 241); ?>
             </a>
             <a href="<?php echo get_page_link(get_page_by_title('Gaming center')->ID); ?>" class="header__menu__item">
-                Gaming Center
+                <?php echo get_field('menu_link_2', 241); ?>
             </a>
             <a href="<?php echo get_page_link(get_page_by_title('F1')->ID); ?>" class="header__menu__item">
-                F1 Simulatoren
+                <?php echo get_field('menu_link_3', 241); ?>
             </a>
             <a href="<?php echo get_page_link(get_page_by_title('Kontakt')->ID); ?>" class="header__menu__item">
-                Kontakt
+                <?php echo get_field('menu_link_4', 241); ?>
             </a>
         </div>
     </div>

@@ -3,14 +3,14 @@ get_header();
 ?>
 
 <section class="section--page section--page--left section--page--left--gamingCenter">
-    <img class="img" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/gaming-center.png" alt="f1" />
+    <img class="img img--minWidth" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/gaming-center.png" alt="f1" />
     <div class="content">
         <h3 class="content__header">
             <?php echo get_field('header'); ?>
         </h3>
-        <p class="content__text">
+        <div class="content__text">
             <?php echo get_field('text'); ?>
-        </p>
+        </div>
     </div>
 </section>
 
@@ -40,12 +40,56 @@ get_header();
     </h4>
 </section>
 
+<section class="section section--points">
+    <figure>
+        <img class="img" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/gaming-center.png" alt="homepage" />
+    </figure>
+    <div class="section--points__points">
+        <p class="section__points__item">
+            <img class="icon" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/check.png" alt="arrow" />
+            Vergnügungscenter für Familien, Freunde oder Pärchen in allen Altersgruppen
+        </p>
+        <p class="section__points__item">
+            <img class="icon" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/check.png" alt="arrow" />
+            Entertainment-Faktor für Ihre Besucher ganz klar im Fokus
+        </p>
+        <p class="section__points__item">
+            <img class="icon" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/check.png" alt="arrow" />
+            Einzigartiges & modernes Nischenkonzept
+        </p>
+        <p class="section__points__item">
+            <img class="icon" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/check.png" alt="arrow" />
+            Zukunftsorientiert und erweiterbar
+        </p>
+        <p class="section__points__item">
+            <img class="icon" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/check.png" alt="arrow" />
+            Krisensicheres Geschäft
+        </p>
+        <p class="section__points__item">
+            <img class="icon" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/check.png" alt="arrow" />
+            Modernste Geräte - versch. Simulatoren (Arcade-& Video Games, Kraftautomaten, Unterhaltungsgeräte, usw...)
+        </p>
+    </div>
+</section>
+
 <section class="section section--map flex" style="max-width: 1000px;">
     <div style="width: 48%;">
         <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=7.012163400650025%2C51.45704541205836%2C7.0157039165496835%2C51.45857294337176&amp;layer=mapnik&amp;marker=51.45780918410515%2C7.0139336585998535" style="border: 1px solid black"></iframe>
+        <h3 class="mapHeader">
+            ESSEN
+        </h3>
+        <h4 class="mapSubheader">
+            Am Porschepl. 2, 45127
+        </h4>
     </div>
     <div style="width: 48%">
         <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=7.146268486976624%2C51.25592585132649%2C7.153349518775941%2C51.258994305080265&amp;layer=mapnik&amp;marker=51.25745985834891%2C7.14980730000002" style="border: 1px solid black"></iframe>
+        <h3 class="mapHeader">
+            WUPPERTAL
+        </h3>
+        <h4 class="mapSubheader">
+            Alte Freiheit 9, 42103
+        </h4>
     </div>
 </section>
 

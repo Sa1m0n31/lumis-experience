@@ -40,9 +40,17 @@ get_header();
         <div class="flex">
             <a href="<?php echo get_page_link(get_page_by_title('Gaming center')->ID); ?>" class="section__link">
                 <img class="img" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/L1.png" alt="gaming-center" />
+                <div class="ourServicesBtn">
+                    Entdecken
+                    <img class="img" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/next-arrow.svg" alt="gaming-center" />
+                </div>
             </a>
             <a href="<?php echo get_page_link(get_page_by_title('F1')->ID); ?>" class="section__link">
                 <img class="img" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/R1.png" alt="f1" />
+                <div class="ourServicesBtn">
+                    Entdecken
+                    <img class="img" src="<?php echo get_bloginfo('stylesheet_directory') ?>/img/next-arrow.svg" alt="gaming-center" />
+                </div>
             </a>
         </div>
     </section>
